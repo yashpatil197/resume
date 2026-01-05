@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #2980b9;
+    --text-color: #333;
+    --light-gray: #f4f4f4;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-size: 11pt;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background: white;
+}
+
+/* Header */
+header {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 28pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.role {
+    font-size: 14pt;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    font-size: 10pt;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    color: #555;
+}
+
+.contact-info a {
+    color: #555;
+    text-decoration: none;
+}
+
+.contact-info i {
+    color: var(--accent-color);
+    margin-right: 5px;
+}
+
+/* Sections */
+section {
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: 14pt;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 12pt;
+    color: #000;
+}
+
+.sub-txt {
+    font-size: 10pt;
+    color: #666;
+    font-style: italic;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    margin: 5px 0 10px 20px;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 4px;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.skill-category strong {
+    color: var(--accent-color);
+}
+
+/* Print Button (Hidden in PDF) */
+.print-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 30px;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background 0.3s ease;
+}
+
+.print-btn:hover {
+    background: #1f6391;
+}
+
+@media print {
+    body { margin: 0; background: white; }
+    .container { width: 100%; padding: 0; margin: 0; }
+    .print-btn { display: none; }
+    a { text-decoration: none; color: #000; }
+}
